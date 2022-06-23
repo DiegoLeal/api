@@ -6,7 +6,11 @@ services:
     build: .
     container_name: api
     environment:
-      - PORT=80
-      - DATABASE_URL=postgresql://postgres:postgres@tf-db.czjiom3rtt6e.us-east-1.rds.amazonaws.com:5432/tf-db?schema=public
+      DB_USER: postgres
+      DB_NAME: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: tf-db.czjiom3rtt6e.us-east-1.rds.amazonaws.com
     ports:
       - "80:80"
+
+
