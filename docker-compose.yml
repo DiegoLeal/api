@@ -6,7 +6,7 @@ services:
     build: .
     container_name: api
     environment:
-      DB_USER: postgres
+      DB_USER: tf-db
       DB_NAME: postgres
       DB_PASSWORD: postgres
       DB_HOST: tf-db.czjiom3rtt6e.us-east-1.rds.amazonaws.com
