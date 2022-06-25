@@ -19,9 +19,12 @@ const findByUserName = async (name: string) => {
 	try {
 		const user = await prisma.users.findUnique({
 			where: {
-				name,
-			},
-		});
+				name: name,
+				},
+				select: {
+					name: true,			   
+				}
+			});
 		return user;
 	} catch (e) {
 		throw new Error(e.message);
